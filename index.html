@@ -5,72 +5,179 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Weather App</title>
+    <title>Weatherly | Weather App</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- Header -->
-    <header>
-        <h1>🌤️ Weather App</h1>
-        <p>Check the weather of your city</p>
+    <!-- HEADER -->
+    <header class="header">
+
+        <div class="logo">
+            🌤️ Weatherly
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#weather">Weather</a>
+            <a href="#about">About</a>
+        </nav>
+
     </header>
 
-    <!-- Main Content -->
-    <main>
 
-        <!-- Search -->
+    <!-- MAIN -->
+    <main id="home">
+
+        <!-- HERO SECTION -->
+        <section class="hero">
+
+            <p class="small-title">LIVE WEATHER DASHBOARD</p>
+
+            <h1>
+                Check Weather
+                <span>Anywhere 🌍</span>
+            </h1>
+
+            <p class="hero-text">
+                Get real-time weather information for any city around the world.
+            </p>
+
+        </section>
+
+
+        <!-- SEARCH SECTION -->
         <section class="search-box">
-            <input type="text" id="cityInput" placeholder="Enter city name">
+
+            <input
+                type="text"
+                id="cityInput"
+                placeholder="🔍 Enter city name..."
+            >
 
             <button onclick="getWeather()">
                 Search
             </button>
+
         </section>
 
-        <!-- Weather Card -->
-        <section class="weather-card">
 
-            <h2 id="cityName">Your City</h2>
+        <!-- WEATHER CARD -->
+        <section class="weather-card" id="weather">
 
-            <div class="temperature">
-                <span id="temperature">--</span>°C
+            <div class="location">
+                📍
+                <span id="cityName">Your City</span>
             </div>
 
-            <p id="description">Search for a city to see weather</p>
+            <div class="weather-main">
 
-            <!-- Weather Details -->
+                <div class="weather-icon">
+                    🌤️
+                </div>
+
+                <div>
+                    <div class="temperature">
+                        <span id="temperature">--</span>°C
+                    </div>
+
+                    <p id="description">
+                        Search for a city to see weather
+                    </p>
+                </div>
+
+            </div>
+
+
+            <!-- WEATHER DETAILS -->
             <div class="weather-details">
 
                 <div class="detail">
-                    <h3>💧 Humidity</h3>
-                    <p id="humidity">--%</p>
+
+                    <div class="detail-icon">
+                        💧
+                    </div>
+
+                    <div>
+                        <h3>Humidity</h3>
+                        <p id="humidity">--%</p>
+                    </div>
+
                 </div>
 
-                <div class="detail">
-                    <h3>💨 Wind Speed</h3>
-                    <p id="wind">-- km/h</p>
-                </div>
 
                 <div class="detail">
-                    <h3>🌡️ Feels Like</h3>
-                    <p id="feelsLike">--°C</p>
+
+                    <div class="detail-icon">
+                        💨
+                    </div>
+
+                    <div>
+                        <h3>Wind Speed</h3>
+                        <p id="wind">-- km/h</p>
+                    </div>
+
+                </div>
+
+
+                <div class="detail">
+
+                    <div class="detail-icon">
+                        🌡️
+                    </div>
+
+                    <div>
+                        <h3>Feels Like</h3>
+                        <p id="feelsLike">--°C</p>
+                    </div>
+
                 </div>
 
             </div>
+
+        </section>
+
+
+        <!-- ABOUT SECTION -->
+        <section class="about" id="about">
+
+            <h2>About Weatherly</h2>
+
+            <p>
+                Weatherly is a simple weather application that provides
+                real-time weather information using a weather API.
+            </p>
 
         </section>
 
     </main>
 
-    <!-- Footer -->
+
+    <!-- FOOTER -->
     <footer>
-        <p>Weather App | Weather Information</p>
+
+        <div class="footer-logo">
+            🌤️ Weatherly
+        </div>
+
+        <p>
+            Real-time weather information made simple.
+        </p>
+
+        <div class="footer-line"></div>
+
+        <p class="copyright">
+            © 2026 Weatherly | Weather App
+        </p>
+
     </footer>
 
+
+    <!-- JAVASCRIPT -->
     <script src="script.js"></script>
 
 </body>
+
 </html>
